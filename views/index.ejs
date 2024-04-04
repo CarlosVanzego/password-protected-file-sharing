@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <meta charset="UTF-8"> <!-- Character encoding -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive viewport settings -->
+  <title>Document</title> <!-- Title of the document -->
 </head>
 <body>
-  <% if (locals.fileLink != null) %>
-   <div style="margin-bottom: 1rem;">
-    Your file is uploaded
-    <a href="<%= locals.fileLink %>"><%= locals.fileLink %></a>
+  <% if (locals.fileLink != null) %> <!-- Check if fileLink is not null -->
+   <div style="margin-bottom: 1rem;"> <!-- Style for success message -->
+    Your file is uploaded <!-- Success message -->
+    <a href="<%= locals.fileLink %>"><%= locals.fileLink %></a> <!-- Link to the uploaded file -->
    </div>
-  <% } %>
-  <form action="/upload" method="post" style="display: grid; gap: .5rem; grid-template-columns: auto 1fr; max-width: 500px; margin: 0 auto;" enctype="multipart/form-data">
-    <label for="file">File</label>
-    <input type="file" id="file" name="file" required />
-    <label for="password">Password</label>
-    <input type="password" id="password" name="password" />
-    <button style="grid-column: span 2;" type="submit">Share</button>
+  <% } %> <!-- End of fileLink check -->
+  <form action="/upload" method="post" style="display: grid; gap: .5rem; grid-template-columns: auto 1fr; max-width: 500px; margin: 0 auto;" enctype="multipart/form-data"> <!-- Form for file upload -->
+    <label for="file">File</label> <!-- Label for file input -->
+    <input type="file" id="file" name="file" required /> <!-- File input field -->
+    <label for="password">Password</label> <!-- Label for password input -->
+    <input type="password" id="password" name="password" /> <!-- Password input field -->
+    <button style="grid-column: span 2;" type="submit">Share</button> <!-- Button for form submission -->
   </form>
 </body>
 </html>

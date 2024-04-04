@@ -1,6 +1,7 @@
 const mongoose = require("mongoose")
 
-const File = new mongoose.Schema({
+// Define the schema for the File model
+const FileSchema = new mongoose.Schema({
   path: {
     type: String,
     required: true,
@@ -17,4 +18,5 @@ const File = new mongoose.Schema({
   },
 })
 
-module.exports = mongoose.model("File", File)
+// Export the File model based on the defined schema
+module.exports = mongoose.model("File", FileSchema)
